@@ -1,0 +1,39 @@
+:root {
+	--main-padding: 65px 80px;
+	--white: white;
+	--playfair-font: "Playfair Display", "Times New Roman", Times, serif;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* HEADER */
+
+header {
+	padding: var(--main-padding);
+}
+
+.img-container {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	width: 500px;
+	height: 550px;
+}
+
+.img-container > img {
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.my-name-title {
+	position: absolute;
+	font-family: var(--playfair-font);
+	font-size: 3.5rem;
+	bottom: 0;
+	color: var(--white);
+}
