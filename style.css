@@ -1,18 +1,59 @@
 :root {
+	/* GENERAL */
+	--box-shadow: 1px 1px 10px var(--gray);
 	--main-padding: 65px 80px;
+
+	/* COLORS */
 	--white: white;
-	--playfair-font: "Playfair Display", "Times New Roman", Times, serif;
+	--gray: gray;
+	--blue: #0891b2;
+
+	/* FONT */
+	--title-font: "Playfair Display", "Times New Roman", Times, serif;
+	--paragraph-font: "Roboto", Arial, Helvetica, sans-serif;
+	--paragraph-size: 1.3rem;
+	--h2-size: 3rem;
 }
 
+/* GENERAL */
 html,
-body {
+body,
+h1,
+h2 {
 	margin: 0;
 	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* BODY */
+
+body {
+	overflow-x: hidden;
+}
+
+/* BACKGROUND DECORATION */
+
+.bg-decoration {
+	position: absolute;
+	width: 150vw;
+	height: 130vh;
+	top: -350px;
+	left: -500px;
+	background: var(--blue);
+	transform: rotate(-15deg);
+	z-index: -1;
+	box-shadow: var(--box-shadow);
 }
 
 /* HEADER */
 
 header {
+	position: relative;
+	display: flex;
+	align-items: center;
 	padding: var(--main-padding);
 }
 
@@ -20,8 +61,9 @@ header {
 	display: flex;
 	justify-content: center;
 	position: relative;
-	width: 500px;
-	height: 550px;
+	min-width: 40vw;
+	height: 540px;
+	box-shadow: var(--box-shadow);
 }
 
 .img-container > img {
@@ -32,8 +74,43 @@ header {
 
 .my-name-title {
 	position: absolute;
-	font-family: var(--playfair-font);
+	font-family: var(--title-font);
 	font-size: 3.5rem;
 	bottom: 0;
 	color: var(--white);
+	margin-bottom: 20px;
+}
+
+.about-me-container {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	min-height: 60vh;
+	background: var(--white);
+	padding: 40px 30px;
+	box-shadow: var(--box-shadow);
+}
+
+.about-me-container > h2 {
+	font-family: var(--title-font);
+	font-size: var(--h2-size);
+	font-weight: 400;
+}
+
+.about-me-container > p {
+	font-family: var(--paragraph-font);
+	font-size: var(--paragraph-size);
+	color: var(--gray);
+}
+
+.icons-container {
+	display: flex;
+	align-self: end;
+	margin-top: auto;
+	gap: 20px;
+}
+
+.icons-container > a > img {
+	width: 35px;
+	height: 35px;
 }
