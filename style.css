@@ -1,21 +1,27 @@
 :root {
 	/* GENERAL */
-	--box-shadow: 1px 1px 10px var(--gray);
+	--box-shadow: 2px 2px 5px 0px var(--gray);
 	--main-padding: 65px 80px;
 
 	/* COLORS */
 	--white: white;
-	--gray: gray;
+	--gray: #646464;
 	--blue: #0891b2;
 
 	/* FONT */
 	--title-font: "Playfair Display", "Times New Roman", Times, serif;
 	--paragraph-font: "Roboto", Arial, Helvetica, sans-serif;
 	--paragraph-size: 1.3rem;
-	--h2-size: 3rem;
+	--h1-size: 3.5rem;
+	--h2-size: 2.6rem;
+	--h3-size: 1.3rem;
+
+	/* ICONS */
+	--icon-size: 35px;
 }
 
 /* GENERAL */
+
 html,
 body,
 h1,
@@ -26,6 +32,17 @@ h2 {
 
 * {
 	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	display: flex;
+}
+
+h2 {
+	font-family: var(--title-font);
+	font-size: var(--h2-size);
+	font-weight: 400;
 }
 
 /* BODY */
@@ -75,7 +92,7 @@ header {
 .my-name-title {
 	position: absolute;
 	font-family: var(--title-font);
-	font-size: 3.5rem;
+	font-size: var(--h1-size);
 	bottom: 0;
 	color: var(--white);
 	margin-bottom: 20px;
@@ -91,12 +108,6 @@ header {
 	box-shadow: var(--box-shadow);
 }
 
-.about-me-container > h2 {
-	font-family: var(--title-font);
-	font-size: var(--h2-size);
-	font-weight: 400;
-}
-
 .about-me-container > p {
 	font-family: var(--paragraph-font);
 	font-size: var(--paragraph-size);
@@ -110,7 +121,143 @@ header {
 	gap: 20px;
 }
 
-.icons-container > a > img {
-	width: 35px;
-	height: 35px;
+img.icon {
+	width: var(--icon-size);
+	height: var(--icon-size);
+}
+
+/* MY WORK SECTION */
+
+.my-work-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: var(--main-padding);
+	gap: 30px;
+}
+
+.project-cards-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 370px));
+	justify-content: space-between;
+	align-items: center;
+	gap: 30px 0px;
+}
+
+.project-card {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	box-shadow: var(--box-shadow);
+	gap: 10px;
+}
+
+.project-card > img {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+}
+
+.project-card-info {
+	padding: 10px 30px;
+}
+
+.project-card-info > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.icons-container-project-card {
+	display: flex;
+	flex-direction: row;
+	gap: 15px;
+}
+
+.icons-container-project-card img {
+	width: 30px;
+	height: 30px;
+}
+
+.project-card-info h3 {
+	font-family: var(--title-font);
+	font-size: var(--h3-size);
+	color: var(--h3-color);
+	font-weight: 400;
+	margin: 0;
+}
+
+.project-card-info p {
+	color: var(--gray);
+	font-family: var(--paragraph-font);
+	margin-bottom: 50px;
+	margin-top: 15px;
+}
+
+/* FOOTER */
+
+footer {
+	display: flex;
+	height: auto;
+	background: var(--blue);
+	padding: var(--main-padding);
+	gap: 25px;
+}
+
+footer > img {
+	object-fit: cover;
+	max-width: 60%;
+}
+
+.footer-info {
+	display: flex;
+	flex-direction: column;
+	color: var(--white);
+}
+
+.footer-info > p {
+	font-size: var(--paragraph-font);
+	font-family: var(--paragraph-font);
+}
+
+.footer-info > p:nth-child(4) {
+	margin-bottom: 10px;
+}
+
+.footer-info > p:nth-child(5) {
+	margin-top: 0px;
+	margin-bottom: 35px;
+}
+
+.footer-info > h2 {
+	font-size: var(--h2-size);
+	color: var(--white);
+}
+
+footer p.phone-info,
+footer p.email-info {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+footer a {
+	color: white;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+footer img.icon.phone,
+footer img.icon.email {
+	width: 30px;
+	height: 30px;
+}
+
+footer .icons-container-footer {
+	display: flex;
+	align-items: center;
+	gap: 15px;
 }
