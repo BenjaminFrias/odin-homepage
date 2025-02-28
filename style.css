@@ -384,6 +384,13 @@ footer .icons-container-footer {
 	gap: 15px;
 }
 
+@media (max-width: 1000px) {
+	footer > img {
+		max-width: 55%;
+		height: auto;
+	}
+}
+
 @media (max-width: 500px) {
 	footer {
 		flex-direction: column;
