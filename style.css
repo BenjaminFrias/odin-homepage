@@ -112,6 +112,7 @@ header {
 	object-fit: cover;
 	float: left;
 	margin-right: 30px;
+	box-shadow: var(--box-shadow);
 }
 
 .my-name-title {
@@ -121,6 +122,7 @@ header {
 	font-family: var(--title-font);
 	font-size: 5vw;
 	bottom: -50px;
+	font-weight: 400;
 	color: var(--white);
 }
 
@@ -134,6 +136,7 @@ header {
 	font-size: var(--paragraph-size);
 	color: var(--gray);
 	margin-right: 30px;
+	margin-bottom: 70px;
 }
 
 .icons-container {
@@ -151,22 +154,34 @@ img.icon {
 
 @media (max-width: 1000px) {
 	.header-info-container {
-		position: relative; /* Needed for absolute positioning of the image */
+		height: auto;
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 100px;
 	}
 
 	.my-name-title {
 		position: absolute;
+		text-align: left;
+		bottom: 0;
+		top: -75px;
+		right: -40%;
+		font-size: 6vw;
 		width: 100%;
-		top: 0;
-		left: 300px;
 	}
 
-	.img-container {
-		width: 50vw;
+	.header-info-container > img {
+		width: 60%;
+		height: 40vw;
+		margin-right: 15px;
+		margin-top: -100px;
+		margin-left: -30px;
+		transform: translateY(0%);
 	}
 
-	.about-me-container {
-		flex: 1;
+	.header-info-container > p {
+		margin-bottom: 100px;
+		margin-left: 15px;
 	}
 }
 
@@ -184,7 +199,7 @@ img.icon {
 .project-cards-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(100px, 370px));
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	gap: 30px 0px;
 }
@@ -237,6 +252,9 @@ img.icon {
 	font-family: var(--paragraph-font);
 	margin-bottom: 50px;
 	margin-top: 15px;
+}
+
+@media (max-width: 1000px) {
 }
 
 /* FOOTER */
